@@ -30,8 +30,8 @@ int main()
                 y[w] = t[z];
         }
     }
-    y[dlugosc] = '\0';
-    cout << endl;
+    
+   cout << endl;
    cout << y;
     
 }
