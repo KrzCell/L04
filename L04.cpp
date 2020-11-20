@@ -43,11 +43,37 @@ int main()
 {
     constexpr int n = 5;
     int tab[n][n];
-    int k = 25, w=0 ,l;
+    int k = 25, w=0 ,l,i;
     l = n;
     while (k != 0)
     {
+        for (i = w; i < l; i++)
+        {
+            tab[w][i] = k--;
+        }
+        for (i = w + 1; i < l; i++)
+        {
+            tab[i][l - 1] = k--;
+        }
+        for (i = l - 2; i >= w; i--)
+        {
+            tab[l - 1][i] = k--;
+        }
+        for (i = l - 2; i > w; i--)
+        {
+            tab[i][w] = k--;
+        }
+        w++;
+        l--;
         
+    }
+    for (i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout << tab[j][i] << "\t";
+        }
+        cout << endl;
     }
     
 }
