@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-#define Zadanie4B
+#define Zadanie4C
 
 #ifdef Zadanie4A
 
@@ -38,6 +38,7 @@ int main()
 }
 
 #endif // Zadanie4A
+
 #ifdef Zadanie4B
 int main()
 {
@@ -78,6 +79,14 @@ int main()
     
 }
 #endif // Zadanie4B
+
+#ifdef Zadanie4C
+int main()
+{
+    int tab[5][5];
+}
+#endif // Zadanie4C
+
 
 
 
