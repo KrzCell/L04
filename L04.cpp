@@ -43,7 +43,12 @@ int main()
 {
     constexpr int n = 5;
     int tab[n][n];
-    int k = 1, w;
+    int k = 25, w=0 ,l;
+    l = n;
+    while (k != 0)
+    {
+        
+    }
     
 }
 #endif // Zadanie4B
