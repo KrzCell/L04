@@ -84,7 +84,8 @@ int main()
 int main()
 {
     int tab[5][5];
-    int i, j, sw, sk;
+    int i, j, sw=0, sk=0, sm=0, sn=0;
+    bool magiczny = true;
     for (i = 0; i < 5; i++)
     {
         for (j = 0; j < 5; j++)
@@ -96,18 +97,35 @@ int main()
 
     for (i = 0; i < 5; i++) {
         for (j = 0; j < 5; j++) {
-            cout << tab[i][j] << "  ";
+            cout << tab[i][i] << "  ";
         }
-        if (i == (j-1))
             cout << endl;
     }
 
-    for (i = 0; i < 5; i++)
+    for (i = 0; i < 5; i++) 
         sw += tab[i][j];
-
-    for (i = 0; i < 5; i++)
+    
+    for (i = 0, j=0; i < 5; i++,j++)
         sk += tab[i][j];
-
+    
+    if (sk != sw)
+        magiczny = false;
+    
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            sm += tab[i][j];
+            sn += tab[j][i];
+        }
+        if (sw != sm)
+            magiczny = false;
+        if (sw != sn)
+            magiczny = false;
+    }
+    if (magiczny == true)
+        cout << "Kwadrat jest magiczny" << endl;
+    else
+        cout << "Kwadrat nie jest magiczny" << endl;
+    
 
 }
 #endif // Zadanie4C
