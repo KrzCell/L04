@@ -19,15 +19,15 @@ int main()
     
     for (int z = 0; z < dlugosc; z++)
     {
-        t[z] = tekst[z];
+        
         for (int w = dlugosc; w >= 0; w--)
         {
-            if ((int)t[z] >= 65 && (int)t[z] <= 90)
-                y[w] = (int)(t[z] + 32);
-            else if ((int)t[z] >= 97 && (int)t[z] <= 122)
-                y[w] = (int)(t[z] - 32);
+            if ((int)tekst[z] >= 65 && (int)tekst[z] <= 90)
+                y[w] = (int)(tekst[z] + 32);
+            else if ((int)tekst[z] >= 97 && (int)tekst[z] <= 122)
+                y[w] = (int)(tekst[z] - 32);
             else
-                y[w] = t[z];
+                y[w] = tekst[z];
         }
     }
     
