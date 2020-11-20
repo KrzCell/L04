@@ -5,7 +5,8 @@
 #include <string>
 using namespace std;
 
-#define Zadanie4A
+#define Zadanie4B
+
 #ifdef Zadanie4A
 
 int main()
@@ -37,6 +38,16 @@ int main()
 }
 
 #endif // Zadanie4A
+#ifdef Zadanie4B
+int main()
+{
+    constexpr int n = 5;
+    int tab[n][n];
+    int k = 1, w;
+    
+}
+#endif // Zadanie4B
+
 
 
   
