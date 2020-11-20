@@ -84,7 +84,7 @@ int main()
 int main()
 {
     int tab[5][5];
-    int i, j, sw=0, sk=0, sm=0, sn=0;
+    int i, j, przekatna=0, wiersze=0, kolumny=0;
     bool magiczny = true;
     for (i = 0; i < 5; i++)
     {
@@ -107,24 +107,19 @@ int main()
     cout << endl;
 
     for (i = 0; i < 5; i++) 
-        sw += tab[i][i];
-    
-    for (i = 0, j=0; i < 5; i++,j++)
-        sk += tab[i][j];
-    
-    if (sk != sw)
-        magiczny = false;
+        przekatna += tab[i][i];
     
     for (i = 0; i < 5; i++) {
         for (j = 0; j < 5; j++) {
-            sm += tab[i][j];
-            sn += tab[j][i];
+            wiersze += tab[i][j];
+            kolumny += tab[j][i];
         }
-        if (sw != sm)
+        if (przekatna != wiersze)
             magiczny = false;
-        if (sw != sn)
+        if (wiersze != kolumny)
             magiczny = false;
     }
+
     if (magiczny == true)
         cout << "Kwadrat jest magiczny" << endl;
     else
