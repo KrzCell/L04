@@ -94,16 +94,20 @@ int main()
             cin >> tab[i][j];
         }
     }
+    
+    cout << endl;
 
     for (i = 0; i < 5; i++) {
         for (j = 0; j < 5; j++) {
-            cout << tab[i][i] << "  ";
+            cout << tab[i][j] << "  ";
         }
             cout << endl;
     }
 
+    cout << endl;
+
     for (i = 0; i < 5; i++) 
-        sw += tab[i][j];
+        sw += tab[i][i];
     
     for (i = 0, j=0; i < 5; i++,j++)
         sk += tab[i][j];
