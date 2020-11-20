@@ -84,6 +84,31 @@ int main()
 int main()
 {
     int tab[5][5];
+    int i, j, sw, sk;
+    for (i = 0; i < 5; i++)
+    {
+        for (j = 0; j < 5; j++)
+        {
+            cout << "Dla i = " << i << " j = " << j << " Podaj wartosc -> ";
+            cin >> tab[i][j];
+        }
+    }
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            cout << tab[i][j] << "  ";
+        }
+        if (i == (j-1))
+            cout << endl;
+    }
+
+    for (i = 0; i < 5; i++)
+        sw += tab[i][j];
+
+    for (i = 0; i < 5; i++)
+        sk += tab[i][j];
+
+
 }
 #endif // Zadanie4C
 
